@@ -13,45 +13,49 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/wolfcms/?/admin/user</td>
+	<td>/wolfcms/?/admin/page</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertTitle</td>
-	<td>Wolf CMS - Users</td>
+	<td>Wolf CMS - Pages</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Users</td>
+	<td>link=Pages</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertTitle</td>
-	<td>Wolf CMS - Users</td>
+	<td>Wolf CMS - Pages</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Selenium test page</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//img[@alt='delete user icon']</td>
+	<td>//ul[@id='site-map']/li/span/div/span/a[span='Selenium test page']/../../../div[@class='modify']/a[@class='remove']</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertConfirmation</td>
-	<td>Are you sure you wish to delete test?</td>
+	<td>Are you sure you wish to delete Selenium test page and its underlying pages?</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertTitle</td>
-	<td>Wolf CMS - Users</td>
+	<td>Wolf CMS - Pages</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForTextNotPresent</td>
-	<td>test test</td>
+	<td>Selenium test page</td>
 	<td></td>
 </tr>
 </tbody></table>
 </body>
 </html>
-

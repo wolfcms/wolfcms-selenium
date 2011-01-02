@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://localhost/" />
-<title>testcase</title>
+<title>create-test-page</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">testcase</td></tr>
+<tr><td rowspan="1" colspan="3">create-test-page</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
@@ -23,55 +23,64 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Administration</td>
+	<td>link=Pages</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertTitle</td>
-	<td>Wolf CMS - Settings</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementNotPresent</td>
-	<td>link=Backup Restore</td>
+	<td>Wolf CMS - Pages</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>enabled_backup_restore</td>
+	<td>//img[@alt='Add child']</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertTitle</td>
-	<td>Wolf CMS - Settings</td>
+	<td>Wolf CMS - Pages - Add</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
-	<td>link=Backup Restore</td>
-	<td></td>
+	<td>type</td>
+	<td>page_title</td>
+	<td>Selenium test page</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>part_0_content</td>
+	<td>Just a selenium test page.</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>page_status_id</td>
+	<td>label=Published</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>uninstall_backup_restore</td>
+	<td>link=Metadata</td>
 	<td></td>
 </tr>
 <tr>
-	<td>assertConfirmation</td>
-	<td>Are you sure you wish to uninstall this plugin?</td>
+	<td>verifyValue</td>
+	<td>page_slug</td>
+	<td>selenium-test-page</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertTitle</td>
-	<td>Wolf CMS - Settings</td>
+	<td>Wolf CMS - Pages</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementNotPresent</td>
-	<td>link=Backup Restore</td>
+	<td>waitForTextPresent</td>
+	<td>Selenium test page</td>
 	<td></td>
 </tr>
 </tbody></table>
 </body>
 </html>
-
