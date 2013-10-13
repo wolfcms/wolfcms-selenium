@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost/" />
+<title>change-test-user-email</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">change-test-user-email</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/wolfcms/?/admin/user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Users | Wolf CMS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Test User One</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Users - Edit | Wolf CMS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>test1@example.com</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Users | Wolf CMS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@class='message']</td>
+	<td>User has been saved!</td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>//div[text()='User has been saved!']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tbody/tr/td/a[text()='Test User One']/../../td[2]</td>
+	<td>test1@example.com</td>
+</tr>
+</tbody></table>
+</body>
+</html>
